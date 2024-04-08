@@ -33,7 +33,7 @@ apk update && apk add --no-cache nmap && \
 
 ### Usage
 ```bash
-git clone https://github.com/rishabhrpg/puppeteer-on-termux.git
+git clone https://github.com/sarowarhosen03/puppeteer-on-termux.git
 cd puppeteer-on-termux
 yarn install
 node index.js
