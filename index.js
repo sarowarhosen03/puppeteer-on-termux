@@ -5,11 +5,12 @@ screenshot('https://example.com').then(() => console.log('screenshot saved'));
 
 async function screenshot(url) {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: "new",
     args: [
       "--no-sandbox",
       "--disable-gpu",
-    ]
+    ],
+    executablePath:"/usr/bin/chromium"
   });
 
   const page = await browser.newPage();

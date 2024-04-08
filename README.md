@@ -17,14 +17,14 @@ Termux is an Android terminal emulator and Linux environment app that works dire
 * Installing chromium on Termux directly requires snap which is another big hurdle so alternatively using alpine distro here.
 
 ### Install Prerequisites
-```
+```bash
 pkg install proot-distro
 proot-distro install alpine
 proot-distro login alpine
 apk update && apk add --no-cache nmap && \
   echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
-  echo @edge http://nl.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories && \
-  apk update && \
+  echo @edge http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories && \
+  apk update  -y && apk upgrade -y && apk add yarn && \
   apk add --no-cache \
   chromium
 ```
@@ -32,7 +32,7 @@ apk update && apk add --no-cache nmap && \
 * Yarn v1.22+
 
 ### Usage
-```
+```bash
 git clone https://github.com/rishabhrpg/puppeteer-on-termux.git
 cd puppeteer-on-termux
 yarn install
